@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uomo e-Commerce</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">  -->
+    <script
+      src="https://kit.fontawesome.com/7008036abf.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo"><img src="imagess/logo.png" alt="" /></div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="pages.html">Pages</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="icons">
+          <a href="#"><i class="fa-light fa-magnifying-glass"></i></a>
+          <a href="#"><i class="fa-light fa-user"></i></a>
+          <a href="#"><i class="fa-light fa-heart"></i></a>
+          <a href="#"><i class="fa-light fa-cart-shopping"></i></a>
+          <a href="#"><i class="fa-light fa-bars"></i></a>
+        </div>
+        <div class="hamburger" id="hamburger">&#9776;</div>
+      </nav>
+    </header>
+
+    <div class="home-container">
+      <!-- Text Slide -->
+      <div class="text-slideshow-container">
+        <div class="text-slides">
+          <div class="text-slide slide-1">
+            <h4>New trend</h4>
+            <h1>SUMMER SALE STYLISH</h1>
+            <h1><b>WOMENS</b></h1>
+            <h4><a href="#">Discover More</a></h4>
+          </div>
+          <div class="text-slide slide-2">
+            <h4>Summer 2024</h4>
+            <h1>HELLO NEW SEASON</h1>
+            <h1><b>LIMITED TIME OFFER - UPTO 60% OFF & FREE SHIPPING</b></h1>
+            <h4><a href="#">Discover More</a></h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image Slide -->
+      <div class="image-slideshow-container">
+        <div class="image-slides">
+          <img src="imagess/slideshow-character1.png" alt="Image 1" />
+          <img src="imagess/slideshow-character2.png" alt="Image 2" />
+        </div>
+      </div>
+    </div>
+    <div class="container home-shop-block">
+      <div class="left">
+        <div class="home-shop-text">
+          <h4>Hot List</h4>
+          <h2><b>WOMENS</b> list</h2>
+          <h4><a href="shop.html">Shop now</a></h4>
+        </div>
+      </div>
+      <div class="right">
+        <div class="right-top">
+          <div class="home-shop-text">
+            <h4>Hot List</h4>
+            <h2><b>MENS</b> list</h2>
+            <h4><a href="shop.html">Shop now</a></h4>
+          </div>
+        </div>
+        <div class="right-bottom">
+          <div class="right-bottom-1">
+            <div class="home-shop-text">
+              <h4>Hot List</h4>
+              <h2><b>KIDS</b> list</h2>
+              <h4><a href="shop.html">Shop now</a></h4>
+            </div>
+          </div>
+          <div class="right-bottom-2">
+            <h1>E-Gift Cards</h1>
+            <h4>Surprise someone with the gift they really want.</h4>
+            <h4><a href="shop.html">Shop now</a></h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="trendy-style" style="text-align: center">
+      <h1>OUR TRENDY <b> PRODUCTS</b></h1>
+    </div>
+
+    <div class="cart-container">
+      <div class="cart-menu" style="background-color: whitesmoke">
+        <button class="tab-button" onclick="showContent('electronics')">
+          ALL
+        </button>
+        <button class="tab-button" onclick="showContent('clothing')">
+          NEW ARRIVALS
+        </button>
+        <button class="tab-button" onclick="showContent('books')">
+          BEST SELLERS
+        </button>
+        <button class="tab-button" onclick="showContent('home')">
+          TOP RATED
+        </button>
+      </div>
+      <div class="cart-content">
+        <div id="electronics" class="tab-content">
+          <div class="grid-container">
+            <div class="grid-item">
+              <img
+                src="imagess/product_1-1.jpg"
+                alt="Avatar"
+                style="width: 100%"
+              />
+              <div class="container">
+                <h5>Dresses</h5>
+                <h4>Colorful Jacket</h4>
+                <p>$29</p>
+              </div>
+            </div>
+            <div class="grid-item">
+              <img
+                src="imagess/product_2-1.jpg"
+                alt="Avatar"
+                style="width: 100%"
+              />
+              <div class="container">
+                <h5>Dresses</h5>
+                <h4>Calvin Shorts</h4>
+                <p>$62</p>
+              </div>
+            </div>
+            <div class="grid-item">
+              <img
+                src="imagess/product_3-1.jpg"
+                alt="Avatar"
+                style="width: 100%"
+              />
+              <div class="container">
+                <h5>Dresses</h5>
+                <h4>Kirby T-Shirt</h4>
+                <p>$17</p>
+              </div>
+            </div>
+            <div class="grid-item">
+              <img
+                src="imagess/product_4-1.jpg"
+                alt="Avatar"
+                style="width: 100%"
+              />
+              <div class="container">
+                <h5>Dresses</h5>
+                <h4>Cableknit Shawl</h4>
+                <p><strike>$129</strike> $99</p>
+              </div>
+            </div>
+            <div class="grid-item">
+              <img
+                src="imagess/product_5-1.jpg"
+                alt="Avatar"
+                style="width: 100%"
+              />
+              <div class="container">
+                <h5>Dresses</h5>
+                <h4>Cropped Faux Leather Jacket</h4>
+                <p>$29</p>
+              </div>
+            </div>
+            <div class="grid-item">
+              <img
+                src="imagess/product_6-1.jpg"
+                alt="Avatar"
+                style="width: 100%"
+              />
+              <div class="container">
+                <h5>Dresses</h5>
+                <h4>Shirt In Botanical Cheetah Print</h4>
+                <p>$62</p>
+              </div>
+            </div>
+            <div class="grid-item">
+              <img
+                src="imagess/product_7-1.jpg"
+                alt="Avatar"
+                style="width: 100%"
+              />
+              <div class="container">
+                <h5>Dresses</h5>
+                <h4>Cropped Faux Leather Jacket</h4>
+                <p>$17</p>
+              </div>
+            </div>
+            <div class="grid-item">
+              <img
+                src="imagess/product_8-1.jpg"
+                alt="Avatar"
+                style="width: 100%"
+              />
+              <div class="container">
+                <h5>Dresses</h5>
+                <h4>Cropped Faux Leather Jacket</h4>
+                <p><strike>$129</strike> $99</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="clothing" class="tab-content">
+          <div class="grid-container">
+            <div class="grid-item">
+              <img
+                src="imagess/product_2-1.jpg"
+                alt="Avatar"
+                style="width: 100%"
+              />
+              <div class="container">
+                <h5>Dresses</h5>
+                <h4>Calvin Shorts</h4>
+                <p>$62</p>
+              </div>
+            </div>
+            <div class="grid-item">
+              <img
+                src="imagess/product_1-1.jpg"
+                alt="Avatar"
+                style="width: 100%"
+              />
+              <div class="container">
+                <h5>Dresses</h5>
+                <h4>Calvin Shorts</h4>
+                <p>$62</p>
+              </div>
+            </div>
+            <div class="grid-item">
+              <img
+                src="imagess/product_4-1.jpg"
+                alt="Avatar"
+                style="width: 100%"
+              />
+              <div class="container">
+                <h5>Dresses</h5>
+                <h4>Calvin Shorts</h4>
+                <p>$62</p>
+              </div>
+            </div>
+            <div class="grid-item">
+              <img
+                src="imagess/product_3-1.jpg"
+                alt="Avatar"
+                style="width: 100%"
+              />
+              <div class="container">
+                <h5>Dresses</h5>
+                <h4>Calvin Shorts</h4>
+                <p>$62</p>
+              </div>
+            </div>
+            <div class="grid-item">
+              <img
+                src="imagess/product_7-1.jpg"
+                alt="Avatar"
+                style="width: 100%"
+              />
+              <div class="container">
+                <h5>Dresses</h5>
+                <h4>Calvin Shorts</h4>
+                <p>$62</p>
+              </div>
+            </div>
+            <div class="grid-item">
+              <img
+                src="imagess/product_6-1.jpg"
+                alt="Avatar"
+                style="width: 100%"
+              />
+              <div class="container">
+                <h5>Dresses</h5>
+                <h4>Calvin Shorts</h4>
+                <p>$62</p>
+              </div>
+            </div>
+            <div class="grid-item">
+              <img
+                src="imagess/product_8-1.jpg"
+                alt="Avatar"
+                style="width: 100%"
+              />
+              <div class="container">
+                <h5>Dresses</h5>
+                <h4>Calvin Shorts</h4>
+                <p>$62</p>
+              </div>
+            </div>
+            <div class="grid-item">
+              <img
+                src="imagess/product_5-1.jpg"
+                alt="Avatar"
+                style="width: 100%"
+              />
+              <div class="container">
+                <h5>Dresses</h5>
+                <h4>Calvin Shorts</h4>
+                <p>$62</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="books" class="tab-content">
+          <div class="grid-container">
+            <div class="grid-item">
+              <img
+                src="imagess/product_6-1.jpg"
+                alt="Avatar"
+                style="width: 100%"
+              />
+              <div class="container">
+                <h5>Dresses</h5>
+                <h4>Calvin Shorts</h4>
+                <p>$62</p>
+              </div>
+            </div>
+            <div class="grid-item">
+              <img
+                src="imagess/product_4-1.jpg"
+                alt="Avatar"
+                style="width: 100%"
+              />
+              <div class="container">
+                <h5>Dresses</h5>
+                <h4>Calvin Shorts</h4>
+                <p>$62</p>
+              </div>
+            </div>
+            <div class="grid-item">
+              <img
+                src="imagess/product_8-1.jpg"
+                alt="Avatar"
+                style="width: 100%"
+              />
+              <div class="container">
+                <h5>Dresses</h5>
+                <h4>Calvin Shorts</h4>
+                <p>$62</p>
+              </div>
+            </div>
+            <div class="grid-item">
+              <img
+                src="imagess/product_2-1.jpg"
+                alt="Avatar"
+                style="width: 100%"
+              />
+              <div class="container">
+                <h5>Dresses</h5>
+                <h4>Calvin Shorts</h4>
+                <p>$62</p>
+              </div>
+            </div>
+            <div class="grid-item">
+              <img
+                src="imagess/product_7-1.jpg"
+                alt="Avatar"
+                style="width: 100%"
+              />
+              <div class="container">
+                <h5>Dresses</h5>
+                <h4>Calvin Shorts</h4>
+                <p>$62</p>
+              </div>
+            </div>
+            <div class="grid-item">
+              <img
+                src="imagess/product_1-1.jpg"
+                alt="Avatar"
+                style="width: 100%"
+              />
+              <div class="container">
+                <h5>Dresses</h5>
+                <h4>Calvin Shorts</h4>
+                <p>$62</p>
+              </div>
+            </div>
+            <div class="grid-item">
+              <img
+                src="imagess/product_3-1.jpg"
+                alt="Avatar"
+                style="width: 100%"
+              />
+              <div class="container">
+                <h5>Dresses</h5>
+                <h4>Calvin Shorts</h4>
+                <p>$62</p>
+              </div>
+            </div>
+            <div class="grid-item">
+              <img
+                src="imagess/product_5-1.jpg"
+                alt="Avatar"
+                style="width: 100%"
+              />
+              <div class="container">
+                <h5>Dresses</h5>
+                <h4>Calvin Shorts</h4>
+                <p>$62</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="home" class="tab-content">
+          <div class="grid-container">
+            <div class="grid-item">
+              <img
+                src="imagess/product_8-1.jpg"
+                alt="Avatar"
+                style="width: 100%"
+              />
+              <div class="container">
+                <h5>Dresses</h5>
+                <h4>Calvin Shorts</h4>
+                <p>$62</p>
+              </div>
+            </div>
+            <div class="grid-item">
+              <img
+                src="imagess/product_7-1.jpg"
+                alt="Avatar"
+                style="width: 100%"
+              />
+              <div class="container">
+                <h5>Dresses</h5>
+                <h4>Calvin Shorts</h4>
+                <p>$62</p>
+              </div>
+            </div>
+            <div class="grid-item">
+              <img
+                src="imagess/product_6-1.jpg"
+                alt="Avatar"
+                style="width: 100%"
+              />
+              <div class="container">
+                <h5>Dresses</h5>
+                <h4>Calvin Shorts</h4>
+                <p>$62</p>
+              </div>
+            </div>
+            <div class="grid-item">
+              <img
+                src="imagess/product_5-1.jpg"
+                alt="Avatar"
+                style="width: 100%"
+              />
+              <div class="container">
+                <h5>Dresses</h5>
+                <h4>Calvin Shorts</h4>
+                <p>$62</p>
+              </div>
+            </div>
+            <div class="grid-item">
+              <img
+                src="imagess/product_4-1.jpg"
+                alt="Avatar"
+                style="width: 100%"
+              />
+              <div class="container">
+                <h5>Dresses</h5>
+                <h4>Calvin Shorts</h4>
+                <p>$62</p>
+              </div>
+            </div>
+            <div class="grid-item">
+              <img
+                src="imagess/product_3-1.jpg"
+                alt="Avatar"
+                style="width: 100%"
+              />
+              <div class="container">
+                <h5>Dresses</h5>
+                <h4>Calvin Shorts</h4>
+                <p>$62</p>
+              </div>
+            </div>
+            <div class="grid-item">
+              <img
+                src="imagess/product_2-1.jpg"
+                alt="Avatar"
+                style="width: 100%"
+              />
+              <div class="container">
+                <h5>Dresses</h5>
+                <h4>Calvin Shorts</h4>
+                <p>$62</p>
+              </div>
+            </div>
+            <div class="grid-item">
+              <img
+                src="imagess/product_1-1.jpg"
+                alt="Avatar"
+                style="width: 100%"
+              />
+              <div class="container">
+                <h5>Dresses</h5>
+                <h4>Calvin Shorts</h4>
+                <p>$62</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="best-deal">
+      <div class="left-text">
+        <h4 style="color: red">Deal of the week</h4>
+        <h1>Spring Collection</h1>
+        <h4><a href="shop.html">Shop Now</a></h4>
+      </div>
+      <div class="right-img">
+        <img src="imagess/best deal.png" alt="" />
+      </div>
+    </div>
+
+    <div class="home-shirts">
+      <div class="block red-overlay">
+        <div class="text">
+          <h4>Starting At $19</h4>
+          <h1>Women's T-Shirts</h1>
+          <h4><a href="shop.html">Shop now</a></h4>
+        </div>
+      </div>
+      <div class="block gray-overlay">
+        <div class="text">
+          <h4>Starting At $39</h4>
+          <h1>Men's Sportswear</h1>
+          <h4><a href="shop.html">Shop now</a></h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="trendy-style" style="text-align: center">
+      <h1>LIMITED <b> EDITION</b></h1>
+    </div>
+
+    <div class="scroll-container">
+      <!-- Repeat the card structure 7 more times, changing image src and content -->
+
+      <div class="card">
+        <div class="image-container">
+          <img src="imagess/product-0-1 cart.jpg" alt="Image 1" />
+          <div class="overlay">
+            <div class="overlay-content">
+              <a href="#">ADD TO CART</a>
+            </div>
+          </div>
+        </div>
+        <div class="card-content">
+          <h3>Dresses</h3>
+          <p>Hub Accent Mirror</p>
+          <p>$17</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="image-container">
+          <img src="imagess/product-1-1 cart.jpg" alt="Image 1" />
+          <div class="overlay">
+            <div class="overlay-content">
+              <a href="#">ADD TO CART</a>
+            </div>
+          </div>
+        </div>
+        <div class="card-content">
+          <h3>Dresses</h3>
+          <p>Hosking Blue Area Rug</p>
+          <p>$29</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="image-container">
+          <img src="imagess/product-2-1 cart.jpg" alt="Image 1" />
+          <div class="overlay">
+            <div class="overlay-content">
+              <a href="#">ADD TO CART</a>
+            </div>
+          </div>
+        </div>
+        <div class="card-content">
+          <h3>Dresses</h3>
+          <p>Hanneman Pauf</p>
+          <p>$62</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="image-container">
+          <img src="imagess/product-3-1 cart.jpg" alt="Image 1" />
+          <div class="overlay">
+            <div class="overlay-content">
+              <a href="#">ADD TO CART</a>
+            </div>
+          </div>
+        </div>
+        <div class="card-content">
+          <h3>Dresses</h3>
+          <p>Cushion futton Slip Cover</p>
+          <p>$62</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="image-container">
+          <img src="imagess/product-0-1 cart.jpg" alt="Image 1" />
+          <div class="overlay">
+            <div class="overlay-content">
+              <a href="#">ADD TO CART</a>
+            </div>
+          </div>
+        </div>
+        <div class="card-content">
+          <h3>Dresses</h3>
+          <p>Hub Accent Mirror</p>
+          <p>$17</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="image-container">
+          <img src="imagess/product-1-1 cart.jpg" alt="Image 1" />
+          <div class="overlay">
+            <div class="overlay-content">
+              <a href="#">ADD TO CART</a>
+            </div>
+          </div>
+        </div>
+        <div class="card-content">
+          <h3>Dresses</h3>
+          <p>Hosking Blue Area Rug</p>
+          <p>$29</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="image-container">
+          <img src="imagess/product-2-1 cart.jpg" alt="Image 1" />
+          <div class="overlay">
+            <div class="overlay-content">
+              <a href="#">ADD TO CART</a>
+            </div>
+          </div>
+        </div>
+        <div class="card-content">
+          <h3>Dresses</h3>
+          <p>Hanneman Pauf</p>
+          <p>$62</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="image-container">
+          <img src="imagess/product-3-1 cart.jpg" alt="Image 1" />
+          <div class="overlay">
+            <div class="overlay-content">
+              <a href="#">ADD TO CART</a>
+            </div>
+          </div>
+        </div>
+        <div class="card-content">
+          <h3>Dresses</h3>
+          <p>Cushion futton Slip Cover</p>
+          <p>$62</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="image-container">
+          <img src="imagess/product-0-1 cart.jpg" alt="Image 1" />
+          <div class="overlay">
+            <div class="overlay-content">
+              <a href="#">ADD TO CART</a>
+            </div>
+          </div>
+        </div>
+        <div class="card-content">
+          <h3>Dresses</h3>
+          <p>Hub Accent Mirror</p>
+          <p>$17</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="trendy-style" style="text-align: center">
+      <h1>@<b> UOMO</b></h1>
+    </div>
+
+    <div class="gallery">
+      <!-- Repeat this block for each image -->
+      <div class="card-gall">
+          <img src="imagess/insta1.jpg" alt="Image 1">
+          <div class="overlayy"></div>
+      </div>
+      <div class="card-gall">
+          <img src="imagess/insta2.jpg" alt="Image 2">
+          <div class="overlayy"></div>
+      </div>
+      <div class="card-gall">
+          <img src="imagess/insta12.jpg" alt="Image 3">
+          <div class="overlayy"></div>
+      </div>
+      <div class="card-gall">
+          <img src="imagess/insta10.jpg" alt="Image 4">
+          <div class="overlayy"></div>
+      </div>
+      <div class="card-gall">
+          <img src="imagess/insta5.jpg" alt="Image 5">
+          <div class="overlayy"></div>
+      </div>
+      <div class="card-gall">
+          <img src="imagess/insta9.jpg" alt="Image 6">
+          <div class="overlayy"></div>
+      </div>
+      <div class="card-gall">
+          <img src="imagess/insta7.jpg" alt="Image 7">
+          <div class="overlayy"></div>
+      </div>
+      <div class="card-gall">
+          <img src="imagess/insta8.jpg" alt="Image 8">
+          <div class="overlayy"></div>
+      </div>
+      <div class="card-gall">
+          <img src="imagess/insta9.jpg" alt="Image 9">
+          <div class="overlayy"></div>
+      </div>
+      <div class="card-gall">
+          <img src="imagess/insta10.jpg" alt="Image 10">
+          <div class="overlayy"></div>
+      </div>
+      <div class="card-gall">
+          <img src="imagess/insta11.jpg" alt="Image 11">
+          <div class="overlayy"></div>
+      </div>
+      <div class="card-gall">
+          <img src="imagess/insta12.jpg" alt="Image 12">
+          <div class="overlayy"></div>
+      </div>
+  </div>
+
+<div class="three-block">
+  <div class="onee">
+<h3><b>Fast And Free Delivery</b></h3>
+<h4>Free delivery for all orders over $140</h4>
+  </div>
+  <div class="twoo">
+    <h3><b>24/7 Customer Support</b></h3>
+    <h4>Friendly 24/7 customer support</h4>
+  </div>
+  <div class="three">
+    <h3><b>Money Back Guarantee</b></h3>
+    <h4>We return money within 30 days</h4>
+  </div>
+</div>
+
+
+<footer>
+  <div class="footer-container">
+      <div class="footer-column">
+          <h3><img src="imagess/logo.png" alt=""></h3>
+          <ul>
+              <p>1418 River Drive, Suite 35 Cottonhall, CA 9622 United States</p>
+              <li><a href="#">sale@uomo.com</a></li>
+            
+              <li><a href="#">          +1 246-345-0695</a></li>
+          </ul>
+      </div>
+      <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Affiliates</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Contact Us</a></li>
+             
+          </ul>
+      </div>
+      <div class="footer-column">
+          <h3>shop</h3>
+          <ul>
+              <li><a href="#">New Arrivals</a></li>
+              <li><a href="#">Accessories</a></li>
+              <li><a href="#">Men</a></li>
+              <li><a href="#">Women</a></li>
+              <li><a href="#">Shop All</a></li>
+          </ul>
+      </div>
+      <div class="footer-column">
+          <h3>Help</h3>
+          <ul>
+              <li><a href="#">Customer Service</a></li>
+              <li><a href="#">My Account</a></li>
+              <li><a href="#">Find A Store</a></li>
+              <li><a href="#">Legal & Privacy</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Gift Card</a></li>
+          </ul>
+      </div>
+      <div class="footer-column">
+          <h3>Subscribe</h3>
+          <ul>
+             <p>Be the first to get the latest news about trends, promotions, and much more!</p>
+              <li><a href="#">Secure Payment</a></li>
+          </ul>
+      </div>
+  </div>
+</footer>
+
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
+    <script src="script.js"></script>
+  </body>
+</html>

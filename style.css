@@ -1,0 +1,1454 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #fff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px 20px;
+  color: #333;
+  position: relative;
+}
+
+.logo {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links li:hover {
+  text-decoration: underline;
+  transition: 5s ease-in-out;
+}
+
+.nav-links a {
+  color: #333;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.icons {
+  display: flex;
+  gap: 15px;
+}
+
+.icons > a > .fa-light {
+  color: #333;
+  text-decoration: none;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #333;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 400px;
+  background-image: url(imagess/backgroundhome.png);
+  background-repeat: no-repeat;
+  background-color: pink;
+  flex-direction: row; /* Stack text and image slides horizontally */
+}
+
+.text-slideshow-container,
+.image-slideshow-container {
+  position: relative;
+  width: 50%; /* Adjusted to allow horizontal alignment */
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-slides,
+.image-slides {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 1s ease-in-out;
+}
+
+.image-slides img {
+  width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.text-slide.active {
+  display: flex;
+  transform: translateY(0); /* Show the active slide */
+}
+
+.text-slide {
+  display: none;
+  /* flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  max-height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  color: white; */
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  color: white;
+  transition: transform 3s ease-in-out;
+  transform: translateY(100%); /* Move the text out of the container */
+}
+
+.text-slide h1 {
+  font-size: 2.5rem;
+  margin: 0.5rem 0.5rem;
+}
+
+.text-slide h4 {
+  font-size: 1.2rem;
+  margin: 0.5rem 0.5rem;
+}
+
+.text-slide a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .text-slideshow-container,
+  .image-slideshow-container {
+    width: 100%;
+  }
+
+  .text-slideshow-container {
+    height: 50vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-slide h1 {
+    font-size: 1.2rem;
+  }
+
+  .text-slide h4 {
+    font-size: 0.9rem;
+  }
+
+  .text-slideshow-container {
+    height: 40vh;
+  }
+}
+
+/* General styles */
+.home-shop-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 10px 20px;
+  height: auto; /* Adjust height to auto for responsiveness */
+  gap: 18px;
+  color: #333;
+}
+
+.home-shop-block h2 {
+  font-size: xx-large;
+}
+
+.home-shop-block h4 {
+  font-size: large;
+}
+
+.home-shop-block a {
+  color: #333;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+/* Desktop styles */
+.home-shop-block > .left {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  height: 600px;
+  align-items: center;
+  justify-content: center;
+  background-color: lightgray;
+  background-image: url(imagess/hone-shop-left.webp);
+ background-position: right right;
+}
+
+.home-shop-block .right {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 600px;
+  gap: 20px;
+}
+
+.home-shop-block .right-top {
+  display: flex;
+  flex-direction: row;
+  height: 300px;
+  background-color: lightgray;
+  padding: 20px;
+  align-items: center;
+}
+
+.home-shop-block .right .right-top {
+  background-image: url(imagess/left.png);
+}
+
+.home-shop-block .right-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 10px 20px;
+  height: 300px;
+  gap: 10px;
+}
+
+.home-shop-block .right-bottom .right-bottom-1 {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  padding: 5px;
+  align-items: center;
+  background-color: lightgray;
+  background-image: url(imagess/young-boy-with-colored-hair-smiling-at-camera-CAVF82804-removebg-preview.png);
+  background-position: center center;
+}
+
+.home-shop-block .right-bottom-2 {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(241, 210, 210);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .home-shop-block {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .home-shop-block > .left,
+  .home-shop-block .right {
+    width: 100%;
+    height: auto;
+  }
+
+  .home-shop-block .right {
+    gap: 10px;
+  }
+
+  .home-shop-block .right-top,
+  .home-shop-block .right-bottom {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .home-shop-block .right-bottom {
+    gap: 10px;
+  }
+
+  .home-shop-block .right-bottom .right-bottom-1,
+  .home-shop-block .right-bottom-2 {
+    width: 100%;
+    height: auto;
+    background-position: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-shop-block h2 {
+    font-size: large;
+  }
+
+  .home-shop-block h4 {
+    font-size: medium;
+  }
+
+  .home-shop-block .right-bottom .right-bottom-1,
+  .home-shop-block .right-bottom-2 {
+    padding: 5px;
+  }
+}
+
+.cart-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.cart-menu {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  margin-bottom: 20px;
+  background-color: none;
+}
+
+.tab-button {
+  padding: 10px 15px;
+  border: none;
+  color: black;
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+  flex: 1; /* Allows buttons to adjust size in flex container */
+  text-align: center;
+}
+
+.tab-button:hover {
+  background-color: #99acc0;
+}
+
+.cart-content {
+  padding: 14px;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 10px;
+}
+
+
+.grid-item {
+  position: relative; /* Make sure the overlay can be positioned relative to the grid item */
+  border: 1px solid #ddd;
+  background-color: #fff;
+  text-align: left;
+  overflow: hidden; /* Hide anything that overflows the grid item */
+}
+
+.grid-item img {
+  width: 100%;
+  height: 200px; /* Adjusted for better aspect ratio on smaller screens */
+  object-fit: cover;
+  display: block; /* Ensure the image is a block element */
+}
+
+.overla {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.3s ease; /* Smooth transition for showing/hiding */
+}
+
+.grid-item:hover .overla {
+  opacity: 0.4; /* Show the overlay on hover */
+}
+
+.add-to-cart-button {
+  background-color: rgb(212, 0, 255); /* Orange background */
+  color: #fff;
+  border: 2px solid black;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart-button:hover {
+  background-color: #e55; /* Darker orange on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .add-to-cart-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .grid-item img {
+    height: 150px; /* Smaller image height on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .add-to-cart-button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .grid-item img {
+    height: 120px; /* Further reduced image height */
+  }
+}
+
+.best-deal {
+  display: flex;
+  justify-content: space-around; /* Ensure text and image have space around them */
+  align-items: center;
+  gap: 20px;
+  background-color: #99acc0;
+  padding: 20px 25px;
+  height: auto; /* Allow height to adjust based on content */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.best-deal .left-text {
+  flex: 2; /* Give more space to text */
+  color: #fff; /* Ensure text is readable on background */
+}
+
+.best-deal .left-text h4 {
+  font-size: large;
+  margin: 0;
+}
+
+.best-deal .left-text h1 {
+  font-size: 3rem; /* Adjust font size for large screens */
+  font-weight: 900;
+  margin: 10px 0;
+}
+
+.best-deal .left-text h4 a {
+  text-decoration: underline;
+  color: #fff;
+  font-weight: bold; /* Make the link stand out */
+}
+
+.best-deal .right-img {
+  flex: 1; /* Give less space to image */
+}
+
+.best-deal .right-img img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  max-height: 350px; /* Limit image height */
+  object-fit: cover;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .best-deal {
+    flex-direction: column; /* Stack text and image vertically */
+    text-align: center; /* Center text */
+  }
+
+  .best-deal .left-text {
+    flex: 1; /* Equal space for text on smaller screens */
+    margin-bottom: 20px;
+  }
+
+  .best-deal .left-text h1 {
+    font-size: 2rem; /* Adjust font size for medium screens */
+  }
+
+  .best-deal .right-img img {
+    max-height: 250px; /* Smaller image height for medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .best-deal .left-text h1 {
+    font-size: 1.5rem; /* Further reduce font size for small screens */
+  }
+
+  .best-deal .right-img img {
+    max-height: 200px; /* Further reduce image height */
+  }
+}
+
+.home-shirts {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 10px; /* Space between blocks */
+  padding: 10px;
+  justify-content: space-between;
+}
+
+/* General block styling */
+.block {
+  position: relative;
+  flex: 1;
+  min-width: 300px; /* Minimum width for responsiveness */
+  height: 300px; /* Fixed height for the blocks */
+  background-size: cover;
+  background-position: center;
+  color: #fff; /* Default text color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.block .text {
+  position: relative;
+  z-index: 2; /* Ensure text is above the overlay */
+  text-align: center;
+}
+
+.block .text h4 a {
+  color: #fff;
+}
+
+/* Red overlay block */
+.red-overlay {
+  background-image: url(imagess/images-removebg-preview\ \(4\)\ -\ red.png);
+}
+
+.red-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(159, 71, 71, 0.5); /* Red overlay with 50% opacity */
+  z-index: 0; /* Behind the text */
+}
+
+/* Gray overlay block */
+.gray-overlay {
+  background-image: url(imagess/images-removebg-preview\ \(2\)-gray.png); 
+
+}
+
+.gray-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(134, 129, 129, 0.5); /* Gray overlay with 50% opacity */
+  z-index: 0; /* Behind the text */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .home-shirts {
+    flex-direction: column; /* Stack blocks vertically on small screens */
+  }
+}
+
+.scroll-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px 0;
+  display: flex;
+  gap: 10px;
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: gray #f5f5f5; /* For Firefox */
+}
+
+.scroll-container::-webkit-scrollbar {
+  height: 8px; /* Height for horizontal scrollbar */
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: blue;
+  border-radius: 4px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+.card {
+  display: inline-block;
+  width: 200px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  flex-shrink: 0;
+  margin: 20px;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 200px; /* Adjust height for the image */
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  align-items: flex-end; /* Align content to the bottom */
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform: translateY(100%); /* Initially move the overlay off the screen */
+  opacity: 0; /* Initially hide the overlay */
+  z-index: 1; /* Ensures overlay is above the image */
+}
+
+.card>.image-container:hover .overlay {
+  transform: translateY(0); /* Move the overlay into view */
+  opacity: 1; /* Fully show the overlay */
+}
+
+.overlay-content {
+  padding: 20px;
+}
+
+.overlay-content a {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  color: #007bff;
+  background-color: #fff; /* Light background color for button */
+  text-decoration: none;
+  border-radius: 4px;
+  border: 1px solid #007bff; /* Border color to match text */
+}
+
+.overlay-content a:hover {
+  background-color: #e6e6e6; /* Slightly darker light color on hover */
+}
+
+.card-content {
+  padding: 10px;
+  background-color: #fff; /* Background color for text */
+  z-index: 1; /* Ensures content is above the overlay */
+  position: relative; /* Ensures content stays within card */
+}
+
+.card-content h3 {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.card-content p {
+  margin: 5px 0; /* Add margin to separate lines of text */
+  font-size: 15px;
+  color: #564848;
+}
+
+
+
+/* Scroll Container */
+.scroll-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px 0;
+  display: flex;
+  gap: 10px;
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: gray #f5f5f5; /* For Firefox */
+  max-width: 100%; /* Ensure container does not overflow */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.scroll-container::-webkit-scrollbar {
+  height: 8px; /* Height for horizontal scrollbar */
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: blue;
+  border-radius: 4px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+/* Card styling */
+.card {
+  display: inline-block;
+  width: 200px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  flex-shrink: 0;
+  margin: 10px;
+  box-sizing: border-box; /* Include padding and border in width */
+}
+
+/* Image Container */
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 60%; /* Adjust height for the image */
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlay styling */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%; /* Adjust height for the overlay */
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  align-items: flex-end; /* Align content to the bottom */
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform: translateY(100%); /* Initially move the overlay off the screen */
+  opacity: 0; /* Initially hide the overlay */
+  z-index: 1; /* Ensures overlay is above the image */
+}
+
+.card:hover .overlay {
+  transform: translateY(0); /* Move the overlay into view */
+  opacity: 1; /* Fully show the overlay */
+}
+
+.overlay-content {
+  padding: 10px;
+}
+
+.overlay-content a {
+  display: inline-block;
+  padding: 8px 16px;
+  margin-top: 5px;
+  color: #007bff;
+  background-color: #fff; /* Light background color for button */
+  text-decoration: none;
+  border-radius: 4px;
+  border: 1px solid #007bff; /* Border color to match text */
+}
+
+.overlay-content a:hover {
+  background-color: #e6e6e6; /* Slightly darker light color on hover */
+}
+
+/* Card Content styling */
+.card-content {
+  padding: 8px;
+  background-color: #fff; /* Background color for text */
+  z-index: 1; /* Ensures content is above the overlay */
+  position: relative; /* Ensures content stays within card */
+}
+
+.card-content h3 {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+.card-content p {
+  margin: 4px 0; /* Add margin to separate lines of text */
+  font-size: 12px;
+  color: #564848;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .card {
+    width: 180px;
+    height: 270px;
+    margin: 8px;
+  }
+}
+
+@media (max-width: 992px) {
+  .card {
+    width: 160px;
+    height: 240px;
+    margin: 6px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 140px;
+    height: 210px;
+    margin: 4px;
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    width: 120px;
+    height: 180px;
+    margin: 2px;
+  }
+}
+
+/* Additional Responsive Handling */
+@media (max-width: 576px) {
+  .scroll-container {
+    padding: 5px 0;
+    gap: 5px;
+  }
+}
+
+
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 images per row */
+  gap: 10px; /* Space between images */
+}
+
+.card-gall{
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease; /* Smooth scale effect */
+}
+
+.card-gall img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease; 
+}
+
+.overlayy{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white; /* White color for the overlay */
+  opacity:0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Smooth transition effect */
+}
+
+.card-gall:hover .overlayy{
+  opacity:0.2; /* Show overlay on hover */
+}
+
+.card-gall:hover img {
+  transform: scale(1.1); 
+}
+
+@media (max-width: 1200px) {
+  .gallery {
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .gallery {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .gallery {
+      grid-template-columns: 1fr;
+  }
+}
+
+
+/* Container for the three blocks */
+.three-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin: 30px auto;
+  text-align: center;
+  flex-wrap: wrap; /* Allows items to wrap onto multiple lines */
+}
+
+.three-block > div {
+  flex: 1; /* Allows each block to grow and shrink equally */
+  margin: 10px; /* Space around each block */
+  padding: 20px;
+  box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+}
+
+.three-block h3 {
+  text-transform: uppercase;
+  margin: 10px 0; /* Margin to separate heading from the text */
+}
+
+.three-block h4 {
+  margin: 0; /* Removes default margin for paragraphs */
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .three-block {
+    flex-direction: column; /* Stack blocks vertically on medium screens */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .three-block > div {
+    margin: 10px 0; /* Space between stacked blocks */
+    width: 100%; /* Full width for each block */
+  }
+}
+
+@media (max-width: 576px) {
+  .three-block {
+    padding: 0 10px; /* Padding on the sides for smaller screens */
+  }
+}
+
+
+
+footer {
+  background-color: #615454;
+  color: #fff;
+  padding: 30px 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1%; /* Adjusts spacing between columns */
+}
+
+.footer-column {
+  flex: 1 1 calc(20% - 2%); /* Takes up about 20% of width minus margins */
+  min-width: 180px; /* Ensures columns do not shrink too small */
+}
+
+.footer-column h3 {
+  text-transform: uppercase;
+  margin-top: 0;
+  font-size: 1.2em;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul p{
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .footer-column {
+      flex: 1 1 calc(20% - 2%); /* Adjusts to fit 5 columns on medium screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .footer-column {
+      flex: 1 1 calc(50% - 2%); /* Two columns per row on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-column {
+      flex: 1 1 100%; /* Stacks columns in a single row */
+      margin: 0;
+  }
+}
+
+/*shop*/
+/* Base Styles */
+.shop-container {
+  font-family: "Rajdhani", sans-serif;
+  font-style: normal;
+  text-transform: uppercase;
+  height: auto; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 1.5rem; 
+  padding: 30px;
+  background-image: url(imagess/shop-background.png);
+  background-size: cover; 
+  background-position: center; 
+}
+
+.shop-container ul {
+  font-size: 1.2rem; 
+  font-weight: 500;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; 
+  list-style: none;
+  gap: 13px;
+  padding: 0; 
+}
+
+.shop-container ul li {
+  margin: 0; 
+}
+
+.shop-container ul li a {
+  text-decoration: none;
+  color: #615454;
+}
+
+.shop-container ul li a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+/* Media Queries */
+
+/* For tablets and small desktops */
+@media (max-width: 768px) {
+  .shop-container {
+    font-size: 1.2rem; 
+    padding: 15px; 
+  }
+
+  .shop-container ul {
+    font-size: 1rem;
+    gap: 10px; 
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  .shop-container {
+    font-size: 1rem; 
+    padding: 10px;
+  }
+
+  .shop-container ul {
+    font-size: 0.9rem; 
+    gap: 8px;
+    flex-direction: column; 
+    align-items: flex-start; 
+  }
+
+  .shop-container ul li {
+    width: 100%; 
+  }
+}
+
+/* Base Styles */
+.about-container, .about-container-two {
+  font-family: "Rajdhani", sans-serif;
+  padding: 20px;
+  background-color: #f4f4f4; 
+}
+
+.about-container {
+  text-align: center;
+}
+
+.about-container .heading, .about-container .sec-heading {
+  margin-bottom: 20px;
+}
+
+.about-container h1 {
+  font-size: 2rem; /* Responsive font size */
+  font-weight: 900;
+  color: #333; /* Darker color for contrast */
+}
+
+.about-container .image{
+  background-image: url(imagess/about-1.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0; /* Placeholder color */
+}
+
+
+
+.about-container p {
+  font-size: 1rem; /* Base font size */
+  line-height: 1.6;
+  color: #666; 
+  margin-bottom: 20px;
+}
+
+.about-container-two {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.row-1, .row-2 {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.row-1 .left, .row-1 .right, .row-2 .left, .row-2 .right {
+  flex: 1;
+  padding: 20px;
+  border-radius: 8px; 
+}
+
+.row-1 h2, .row-2 h2 {
+  font-size: 1.5rem; /* Heading size */
+  font-weight: 700;
+  color: #333;
+}
+
+.row-1 p, .row-2 p {
+  font-size: 1rem; 
+  color: #666;
+}
+
+.row-2 .left {
+  background-image: url(imagess/about-2.jpg);
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+.row-2 .left p,.row-2 .left h2{
+  visibility: hidden;
+}
+
+
+/* Media Queries */
+
+/* For tablets and small desktops */
+@media (max-width: 768px) {
+  .about-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .about-container .image {
+    height: 200px;
+  }
+
+  .about-container-two {
+    gap: 15px;
+  }
+
+  .row-1, .row-2 {
+    flex-direction: column;
+  }
+
+  .row-2 .left {
+    background-size: contain; 
+    height: 200px;
+  }
+
+  .row-1 .left, .row-1 .right, .row-2 .left, .row-2 .right {
+    flex: none;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  .about-container h1 {
+    font-size: 1.2rem;
+  }
+
+  .about-container .image {
+    height: 150px;
+  }
+
+  .about-container p {
+    font-size: 0.9rem;
+  }
+
+  .about-container-two {
+    gap: 10px;
+  }
+
+  .row-1 .left, .row-1 .right, .row-2 .left, .row-2 .right {
+    padding: 15px;
+  }
+
+  .row-2 .left {
+    background-size: contain; 
+    height: 150px; 
+  }
+}
+
+
+/* General Styles */
+.blog-container {
+  margin: 12px;
+  border: 2px solid black;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.blog-container .blog-img {
+  height: 300px; /* Set a default height */
+  background-image: url(imagess/backgroundhome.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: rgb(182, 178, 178);
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Center items horizontally */
+  box-sizing: border-box;
+}
+
+.blog-container .blog-img h1 {
+  font-weight: 700;
+  font-size: 2rem; 
+  text-transform: uppercase;
+  margin: 0; 
+}
+
+.blog-container .blog-img ul {
+  list-style: none;
+  font-size: 1.25rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; 
+  justify-content: center;
+  padding: 0; 
+  margin: 0;
+}
+
+.blog-container .blog-img ul li {
+  margin: 0 10px; /* Space between list items */
+}
+
+.blog-container .blog-img ul li:hover {
+  color: #333;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .blog-container .blog-img {
+    height: 250px;
+  }
+  .blog-container .blog-img h1 {
+    font-size: 1.75rem; 
+  }
+  .blog-container .blog-img ul {
+    font-size: 1.1rem; 
+  }
+}
+
+@media (max-width: 992px) {
+  .blog-container .blog-img {
+    height: 200px;
+  }
+  .blog-container .blog-img h1 {
+    font-size: 1.5rem; 
+  }
+  .blog-container .blog-img ul {
+    font-size: 1rem; 
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-container .blog-img {
+    height: 150px;
+  }
+  .blog-container .blog-img h1 {
+    font-size: 1.25rem; 
+  }
+  .blog-container .blog-img ul {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .blog-container .blog-img {
+    height: 100px;
+  }
+  .blog-container .blog-img h1 {
+    font-size: 1rem; 
+  }
+  .blog-container .blog-img ul {
+    font-size: 0.75rem; 
+    flex-direction: column;
+    align-items: center; 
+  }
+  .blog-container .blog-img ul li {
+    margin: 5px 0; 
+  }
+}
+
+
+.blog-blocks{
+  display: flex;
+  flex-direction: column;
+  gap:9px;
+}
+
+.blog-blocks .row{
+  display: flex;
+  flex-direction: row;
+  gap:9px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.blog-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 550px; /* Adjust width as needed */
+  margin: 20px;
+}
+
+.blog-card-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.blog-card-content {
+  padding: 16px;
+}
+
+.blog-card-heading {
+  font-size: 1.5rem; /* Adjust heading size */
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.blog-card-text {
+  font-size: 1rem; /* Adjust text size */
+  color: #666;
+  margin-bottom: 16px;
+}
+
+.blog-card-link {
+  font-size: 1rem;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.blog-card-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .blog-card {
+    width: 100%; /* Full width on smaller screens */
+    max-width: 400px; /* Set a max width */
+  }
+
+  .blog-card-heading {
+    font-size: 1.25rem;
+  }
+
+  .blog-card-text {
+    font-size: 0.9rem;
+  }
+}
